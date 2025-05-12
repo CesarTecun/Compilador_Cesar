@@ -1,0 +1,23 @@
+Programa SerieFibonacci {
+    funciones {
+        entero fibonacci(entero n) {
+            si (n == 0) {
+                ret 0;
+            } sino {
+                si (n == 1) {
+                    ret 1;
+                } sino {
+                    ret fibonacci(n - 1) + fibonacci(n - 2);
+                }
+            }
+        }
+    }
+
+    Inicio {
+        entero i = 0;
+        para (i = 0; i < 60; i = i + 1) {
+            var valor = fibonacci(i);
+            pintar("F(", i, ") = ", valor);
+        }
+    } Fin
+}
